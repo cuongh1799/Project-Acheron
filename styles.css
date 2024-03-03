@@ -1,0 +1,12 @@
+body {
+    background-image: url("/images/acheron.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position-y: 127px; */
+}
+
+h1{
+    color: black;
+    font-size: 64;
+    text-align: center;
+}
