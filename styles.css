@@ -10,6 +10,7 @@ body {
   background-image: url("/images/acheron.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   /* background-position-y: 127px; */
 }
 .title {
