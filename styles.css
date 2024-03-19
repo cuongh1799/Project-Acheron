@@ -1,33 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Indie+Flower&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.25rem;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-image: url("/images/acheron.jpeg");
+
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
 }
 /*Video I-frame*/
 
 .iframe-container {
-  padding: 1rem 1rem 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1rem 0.4rem 1rem;
   background-color: #0b0303;
   border-radius: 10px;
   border: 2px solid #dec189;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  gap: 0.1rem;
+}
+
+.next-logo {
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: "Eagle Lake", serif;
 }
 
 /*Countdown Timer*/
+.countdown-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  display: none;
 
+  padding: 1rem;
+}
+.countdown-timer {
+  font-size: 200px;
+  color: #362aef;
+  font-family: "Eagle Lake", serif;
+}
+
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+  }
+  100% {
+    text-shadow: 0 0 8px #363636, 0 0 30px #363636, 0 0 40px #363636;
+  }
+}
 /*Glitch Effect*/
 
 .hero {
