@@ -28,3 +28,14 @@ const countDown = () => {
 };
 
 setInterval(countDown, 1000);
+
+//click next
+const clickNext = document.querySelector(".next-logo");
+const meme = document.getElementById("meme");
+
+const goToRitual = clickNext.addEventListener("click", (e) => {
+  iFrameContainer.style.opacity = "0";
+  meme.style.opacity = "1";
+});
+
+goToRitual();
