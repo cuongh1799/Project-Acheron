@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Indie+Flower&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Shadows+Into+Light&display=swap");
+
 *,
 *::after,
 *::before {
@@ -22,7 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding-top: 1rem;
+  margin-top: 0.5rem;
 }
 /*Video I-frame*/
 
@@ -37,6 +40,19 @@ body {
   transition: 0.5s ease-in-out;
 }
 
+.playButtonStyle {
+  padding: 1;
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  text-shadow: 0 0 4px #fff, 0 0 1px #fff, 0 0 2px #fff;
+  border-radius: 100%;
+  height: 500px;
+  width: 500px;
+}
 .next-logo {
   color: white;
   font-size: 0.8rem;
@@ -78,6 +94,7 @@ body {
   font-size: 200px;
   color: #362aef;
   font-family: "Eagle Lake", serif;
+  display: none;
 }
 
 .glow {

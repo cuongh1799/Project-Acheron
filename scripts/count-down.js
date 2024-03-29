@@ -1,7 +1,23 @@
-//count-down timer
+//Audio controls
+
+const timer = document.getElementById("timer");
+const buttonA = document.getElementById("playButton");
+
+const setUp = () => {
+  buttonA.addEventListener("click", function () {
+    const audio = document.getElementById("myAudio");
+    audio.play();
+    buttonA.style.display = "none";
+    timer.style.display = "block";
+    startTimer();
+  });
+};
+
+//Timer controls
+
+const startingRealMinutes = 3.6;
 const iFrameContainer = document.getElementById("main-video");
-const startingMinutes = 0.5;
-let time = startingMinutes * 60;
+let time = startingRealMinutes * 60;
 const countdownTimer = document.getElementById("timer");
 const countdownContainer = document.getElementById("timer-wraper");
 
@@ -14,7 +30,7 @@ const countDown = () => {
   if (seconds <= 10) {
     if (seconds % 2 == 1) {
       countdownTimer.style.color = "#da4c50";
-    } else {
+    } else if (seconds % 2 == 0) {
       countdownTimer.style.color = "#f1ddd9";
     }
   } else {
@@ -26,9 +42,11 @@ const countDown = () => {
     countdownContainer.style.display = "none";
   }
 };
+const startTimer = () => {
+  setInterval(countDown, 1000);
+};
 
-setInterval(countDown, 1000);
-
+setUp();
 //click next
 const clickNext = document.querySelector(".next-logo");
 const meme = document.getElementById("meme");
